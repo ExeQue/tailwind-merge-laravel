@@ -11,6 +11,8 @@ abstract class TestCase extends \Orchestra\Testbench\TestCase
 {
     use InteractsWithViews;
 
+    public static mixed $latestResponse = null; // fix for testbench v9.x
+
     protected function getPackageProviders($app): array
     {
         return [
